@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data: () => ({
     valid: true,
@@ -47,8 +49,24 @@ export default {
   methods: {
     submit() {
       if (this.$refs.form.validate()) {
-        // Perform next action
+        return axios({
+          method: 'post',
+          data: {
+            name: this.name,
+            description: this.description,
+            release_year: this.release_year,
+            genre: this.genre,
+          },
+          url: 'http://localhost:8081/movies',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }).then(() => {
+          this.$router.push({ name: 'Home' });
+          this.$refs.form.reset();
+        });
       }
+      return true;
     },
     clear() {
       this.$refs.form.reset();
