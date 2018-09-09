@@ -43,7 +43,7 @@ export default {
     ],
     genreRules: [
       v => !!v || 'Movie genre is required',
-      v => (v && v.lenth <= 80) || 'Genre must be less than equal to 80 characters',
+      // v => (!!v && v.lenth <= 80) || 'Genre must be less than equal to 80 characters',
     ],
     releaseRules: [
       v => !!v || 'Movie release year is required!',
@@ -72,8 +72,19 @@ export default {
             'Content-Type': 'application/json',
           },
         }).then(() => {
+          this.$swal(
+            'Great',
+            'Movie added successfully',
+            'success',
+          );
           this.$router.push({ name: 'Home' });
           this.$refs.form.reset();
+        }).catch(() => {
+          this.$swal(
+            'Oh no',
+            'Could not add the movie!',
+            'error',
+          );
         });
       }
       return true;
