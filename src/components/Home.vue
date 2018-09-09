@@ -4,7 +4,10 @@
       <v-card>
         <v-card-title primary-title>
           <div>
-            <div class="headline">{{ movie.name }}</div>
+            <div class="headline">
+              <v-btn flat :to="`/movies/${movie._id}`"></v-btn>
+              {{ movie.name }}
+            </div>
             <span class="grey--text">{{ movie.release_year }} &bull; {{ movie.genre }}</span>
           </div>
         </v-card-title>
