@@ -67,7 +67,7 @@ export default {
             release_year: this.release_year,
             genre: this.genre,
           },
-          url: 'http://localhost:8081/movies',
+          url: 'http://localhost:8081/movies/add',
           headers: {
             'Content-Type': 'application/json',
           },
