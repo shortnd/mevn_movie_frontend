@@ -9,15 +9,18 @@
     <v-textarea
       name="input-7-1"
       label="Movie Description"
-      v-model="description"
-      multiline></v-textarea>
+      v-model="description"></v-textarea>
     <v-select
       label="Movie Release Year"
       v-model="release_year"
-      :items="years"></v-select>
+      :rules="releaseRules"
+      :items="years"
+      required></v-select>
     <v-text-field
       label="Movie Genre"
-      v-model="genre"></v-text-field>
+      v-model="genre"
+      :rules="genreRules"
+      required></v-text-field>
     <v-btn
       @click="submit"
       :disabled="!valid">Submit</v-btn>
@@ -37,6 +40,13 @@ export default {
     release_year: '',
     nameRules: [
       v => !!v || 'Movie name is required',
+    ],
+    genreRules: [
+      v => !!v || 'Movie genre is required',
+      v => (v && v.lenth <= 80) || 'Genre must be less than equal to 80 characters',
+    ],
+    releaseRules: [
+      v => !!v || 'Movie release year is required!',
     ],
     select: null,
     years: [
