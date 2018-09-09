@@ -1,34 +1,30 @@
 # movie_frontend
 
-This is the frontend for my first mevn stack application
-(MongoDB, Express, Vue, Node.js)
+> A Vue.js project
 
-## Project setup
-```
+## Build Setup
+
+``` bash
+# install dependencies
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# serve with hot reload at localhost:8080
+npm run dev
 
-### Compiles and minifies for production
-```
+# build for production with minification
 npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run e2e tests
+npm run e2e
+
+# run all tests
+npm test
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
