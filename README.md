@@ -1,5 +1,8 @@
 # movie_frontend
 
+This is the frontend for my first mevn stack application
+(MongoDB, Express, Vue, Node.js)
+
 ## Project setup
 ```
 npm install
