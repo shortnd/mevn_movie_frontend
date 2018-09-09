@@ -1,17 +1,12 @@
 <template>
-  <div>
-    Hello World
-  </div>
+  <v-layout>
+    This is home
+  </v-layout>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-    };
-  },
+  name: 'Home',
 };
 </script>
 
