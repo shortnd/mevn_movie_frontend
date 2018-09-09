@@ -36,7 +36,7 @@
       </v-container>
     </v-content>
     <v-footer color="indigo" app>
-      <span class="text--white">&copy; 2018</span>
+      <span class="text-white">&copy; 2018</span>
     </v-footer>
   </v-app>
 </template>
