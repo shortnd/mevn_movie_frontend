@@ -7,6 +7,7 @@
             <v-list-tile-action>
               <v-icon>home</v-icon>
             </v-list-tile-action>
+            <v-list-tile-content>Home</v-list-tile-content>
           </v-list-tile>
         </router-link>
         <router-link :to="{ name: 'Contact' }" class="side_bar_link">
@@ -22,6 +23,10 @@
     <v-toolbar color="indigo" dark fixed app>
       <v-toolbar-side-icon @click.stop="drawer != drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Home</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-item class="hidden-sm-and-down">
+        <v-btn flat :to="{name: 'AddMovie'}">Add Movie</v-btn>
+      </v-toolbar-item>
     </v-toolbar>
     <v-content>
       <v-container fluid>
