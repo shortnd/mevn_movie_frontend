@@ -5,8 +5,7 @@
         <v-card-title primary-title>
           <div>
             <div class="headline">
-              <v-btn flat :to="`/movies/${movie._id}`"></v-btn>
-              {{ movie.name }}
+              <v-btn flat :to="`/movies/${movie._id}`">{{ movie.name }}</v-btn>
             </div>
             <span class="grey--text">{{ movie.release_year }} &bull; {{ movie.genre }}</span>
           </div>
