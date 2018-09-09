@@ -6,11 +6,11 @@
       :rules="nameRules"
       required
       ></v-text-field>
-    <v-text-field
+    <v-textarea
       name="input-7-1"
       label="Movie Description"
       v-model="description"
-      multiline></v-text-field>
+      multiline></v-textarea>
     <v-select
       label="Movie Release Year"
       v-model="release_year"
